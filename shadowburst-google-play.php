@@ -31,7 +31,7 @@ function sb_play_badge($attrs, $content) {
 function sb_qr_code($attrs, $content) {
     extract(shortcode_atts(array(
         'size' => 300,
-    ), $attrs);
+    ), $attrs));
     return "<a href=\"$content\"><img src=\"https://chart.googleapis.com/chart?cht=qr&amp;chs=${size}x$size&amp;chl=\"$content\" width=\"$size\" height=\"$size\" /></a>";
 }
 add_shortcode('app', 'sb_play_badge');
